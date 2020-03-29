@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+	<title>Library</title>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+	<link rel="stylesheet" href="css/index.css"/>
+	<link href="https://fonts.googleapis.com/css?family=Oxanium|Roboto&display=swap" rel="stylesheet"/>
+	<style>
+body,html{
+	height: 100%;
+	font-family: 'Oxanium', cursive;background-image:url("images/lib.jpg");
+		background-attachment: fixed;
+		background-repeat:no-repeat;
+		background-position:center center;
+		background-size:cover;
+		margin:0;
+}
+	</style>
+	<script type="text/javascript" src="js/ind.js"></script>
+</head>
+<body>
+	<header id="nav-right">
+	Welcome <span sec:authentication="name">Guest</span>
+	<form sec:authorize="isAuthenticated()" id="frmlogout" th:action="@{/logout}" method="post">
+		 | <a style="color:#ADFF2F; text-shadow:4px 2px 2px #FF3612" href="javascript:{}" onclick="document.getElementById('frmlogout').submit(); return false;">Logout</a>
+	</form>
+	</header>
+	
+	<div id="text">Create or update your library</div>
+	
+	<button type="button" id="btn">Your Library</button>
+	
+	<form id="add" action="#" class="add_form modal" style="display:none;">
+	<button type="button" id="closeBtn" style="background-color:#00FFFF; font-size:3vw" aria-label="Close Account Info Modal Box">&times;</button>
+		<div id='msg'></div>
+		<p>
+			<label>Library Name</label>
+			<input type="text" id="name" name="name">
+		</p>
+		<p>
+			<input type="submit" id="create" value="Create">
+		</p>
+	</form>
+<footer>
+		Created by Bojan Vujnovic
+	</footer>
+</body>
+</html>

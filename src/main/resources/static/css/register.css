@@ -1,0 +1,59 @@
+@charset "ISO-8859-1";
+body {
+  font-family: 'Oxanium', cursive;
+  background-color: black;
+}
+
+* {
+  box-sizing: border-box;
+}
+.container {
+  padding: 1.6vw;
+  background-color: white;
+  width:50%;
+  margin-left:25%;
+  font-size:2vw;
+}
+
+input[type=text], input[type=password],input[type=email]{
+  width: 100%;
+  padding: 1.5vw;
+  margin: 0.5vw 0 2.2vw 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+  font-size:1.4vw;
+}
+
+input[type=text]:focus, input[type=password]:focus,input[type=email]:focus{
+  background-color: #ddd;
+  outline: none;
+}
+
+
+.registerbtn {
+  background-color: #4169E1;
+  color: white;
+  padding: 1.6vw 2vw;
+  margin: 0.8vw 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity:0.8;
+  font-size:2vw;
+}
+
+.registerbtn:hover {
+  opacity:1;
+}
+
+
+a {
+  color: dodgerblue;
+}
+
+.signin {
+  background-color: #f1f1f1;
+  text-align: center;
+  font-size:2vw;
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Registration</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<link rel="stylesheet" type="text/css" href="css/register.css">
+<link href="https://fonts.googleapis.com/css?family=Oxanium|Roboto&display=swap" rel="stylesheet">
+<script type="text/javascript" src="js/reg.js"></script>
+</head>
+<body>
+	
+	<form>
+		<div class="container">
+    <h1>Register</h1>
+    <h2 id="mess"></h2>
+
+    <label for="firstName"><b>First Name</b></label>
+    <input type="text" placeholder="First Name" id="firstName" name="firstName" required>
+	
+	<label for="lastName"><b>Last Name</b></label>
+    <input type="text" placeholder="Last Name" id="lastName" name="lastName" required>
+    
+    <label for="email"><b>Email</b></label>
+    <input type="email" pattern=".+@globex.com" placeholder="Email" id="email" name="email" required>
+	
+	<label for="userName"><b>Username</b></label>
+    <input type="text" placeholder="Username" id="userName" name="userName" required>
+	
+    <label for="password"><b>Password</b></label>
+    <input type="password" placeholder="Password" id="password" name="password" required>
+
+    <button type="submit" class="registerbtn" id="new">Register</button>
+  </div>
+  
+  <div class="container signin">
+    <p>Already have an account? <a href="/login">Sign in</a>.</p>
+  </div>
+	</form>
+</body>
+</html>

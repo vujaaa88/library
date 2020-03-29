@@ -1,0 +1,74 @@
+@charset "ISO-8859-1";
+body {
+font-family: 'Oxanium', cursive;
+
+background: linear-gradient(90deg, rgba(82,81,78,1) 0%, rgba(189,183,107,1) 64%, rgba(240,230,128,1) 100%);
+}
+
+input[type=text], input[type=password] {
+  width: 100%;
+  margin:1vw 0 0 0;
+  height:5vw;
+  display: inline-block;
+  border: 0.1vw solid #ccc;
+  box-sizing: border-box;
+  font-size:2vw;
+}
+label{
+	font-size:2vw;
+}
+.errMsg {
+	padding:1vw 0.5vw;
+	font-size:2vw;
+	margin-left:30%;
+	text-align:center;
+	align-items:center;
+	color:#D2691E;
+	width:40%;
+	height:2vw;
+	background-color:#F4A460;
+	border-radius:1vw;
+}
+.logMsg {
+	padding:1vw 0.5vw;
+	font-size:2vw;
+	margin-left:30%;
+	text-align:center;
+	align-items:center;
+	color:#2E8B57;
+	width:40%;
+	height:2vw;
+	background-color:#90EE90;
+	border-radius:1vw;
+}
+button {
+  background-color: #4169E1;
+  color: white;
+  padding: 1.4vw 2vw;
+  margin: 0.8vw 0 0 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity:0.8;
+  font-size:2vw;
+}
+
+button:hover {
+  opacity:1;
+}
+
+.imgcontainer {
+  text-align: center;
+  margin: 2.4vw 0 1.2vw 0;
+}
+
+img.avatar {
+  width: 20%;
+  border-radius: 50%;
+}
+
+.container {
+  padding: 2vw;
+  width:50%;
+  margin-left:25%;
+}
