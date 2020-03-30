@@ -1,5 +1,5 @@
 # library
->h2>Library project<h2>
+<h2>Library project</h2>
 
 Application built using Spring Boot [http://projects.spring.io/spring-boot/]
 
