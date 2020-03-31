@@ -6,7 +6,7 @@ Application built using Spring Boot [http://projects.spring.io/spring-boot/]
 ##Development Environment:
 
 Build tool - Maven Java Edition - Java 8 SE Deployment
-Front End - HTML and Bootstrap CSS,Javascript,JQuery
+Front End - HTML,CSS,Javascript,JQuery
 Frameworks - Spring,Rest API,Jackson,Spring Security,Thymeleaf
 
 <h2>URL</h2>
