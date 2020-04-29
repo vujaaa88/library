@@ -1,10 +1,10 @@
-$.getJSON("http://library-env.eba-i6btkwrd.eu-west-2.elasticbeanstalk.com/user", function(data) {
+$.getJSON("https://personal-library-application.herokuapp.com/user", function(data) {
 	var nameOf = data.library.libraryName.valueOf();
 		document.getElementById("libName").innerHTML +=" " + nameOf;
 	});
 
 	$(document).ready(function() {
-						$.getJSON("http://library-env.eba-i6btkwrd.eu-west-2.elasticbeanstalk.com/books",function(json) {
+						$.getJSON("https://personal-library-application.herokuapp.com/books",function(json) {
 									var tr = [];
 									for (var i = 0; i < json.length; i++) {
 										tr.push('<tr>');
@@ -35,7 +35,7 @@ $.getJSON("http://library-env.eba-i6btkwrd.eu-west-2.elasticbeanstalk.com/user",
 											$.ajax({
 													type : "POST",
 													contentType : "application/json; charset=utf-8",
-													url : "http://library-env.eba-i6btkwrd.eu-west-2.elasticbeanstalk.com/add",
+													url : "https://personal-library-application.herokuapp.com/add",
 													data : JSON.stringify({
 																'title' : title,
 																'description' : description,
@@ -71,7 +71,7 @@ $.getJSON("http://library-env.eba-i6btkwrd.eu-west-2.elasticbeanstalk.com/user",
 												var parent = $(this).parent().parent();
 												$.ajax({
 													type : "DELETE",
-													url : "http://library-env.eba-i6btkwrd.eu-west-2.elasticbeanstalk.com/delete" + id,
+													url : "https://personal-library-application.herokuapp.com/delete" + id,
 													cache : false,
 													success : function() {
 														parent.fadeOut('slow',function() {
@@ -95,7 +95,7 @@ $.getJSON("http://library-env.eba-i6btkwrd.eu-west-2.elasticbeanstalk.com/user",
 							if (confirm('Do you really want to delete all books?')) {
 								$.ajax({
 									type : "DELETE",
-									url : "http://library-env.eba-i6btkwrd.eu-west-2.elasticbeanstalk.com/deleteAll",
+									url : "https://personal-library-application.herokuapp.com/deleteAll",
 									cache : false,
 									success : function() {
 										location.reload(true)
@@ -117,7 +117,7 @@ $.getJSON("http://library-env.eba-i6btkwrd.eu-west-2.elasticbeanstalk.com/user",
 											$("#bookTitle").html("Edit book");
 											$("#save").html("<input type='submit' id='update' value='Update' class='sub'>");
 											var id = $(this).attr('id');
-											$.getJSON("http://library-env.eba-i6btkwrd.eu-west-2.elasticbeanstalk.com/book" + id, function(book) {
+											$.getJSON("https://personal-library-application.herokuapp.com/book" + id, function(book) {
 											
 														$("#title").val(book.title);
 														$("#description").val(book.description);
@@ -139,7 +139,7 @@ $.getJSON("http://library-env.eba-i6btkwrd.eu-west-2.elasticbeanstalk.com/user",
 													$.ajax({
 														type : "POST",
 														contentType : "application/json; charset=utf-8",
-														url : "http://library-env.eba-i6btkwrd.eu-west-2.elasticbeanstalk.com/add",
+														url : "https://personal-library-application.herokuapp.com/add",
 														data : JSON.stringify({
 															'id' : id,
 															'title' : title,

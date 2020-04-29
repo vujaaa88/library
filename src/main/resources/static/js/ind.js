@@ -1,5 +1,5 @@
 $(document).delegate('#btn', 'click', function() {
-		$.getJSON("http://library-env.eba-i6btkwrd.eu-west-2.elasticbeanstalk.com/user", function(data){
+		$.getJSON("https://personal-library-application.herokuapp.com/user", function(data){
 			if(data.library !== null){
 				location.replace("homepage");
 			} else {
@@ -19,7 +19,7 @@ $(document).delegate('#create', 'click', function(event) {
 	$.ajax({
 		type: "POST",
 		contentType: "application/json; charset=utf-8",
-		url: "http://library-env.eba-i6btkwrd.eu-west-2.elasticbeanstalk.com/create",
+		url: "https://personal-library-application.herokuapp.com/create",
 		data: JSON.stringify({'libraryName': name}),
 		cache: false,
 		success: function(result) {

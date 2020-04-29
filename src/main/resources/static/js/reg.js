@@ -4,7 +4,7 @@ function isExistsName(userName){
 				$.ajax({
 				async: false,
 				dataType : 'json',
-				url: "http://library-env.eba-i6btkwrd.eu-west-2.elasticbeanstalk.com/users",
+				url: "https://personal-library-application.herokuapp.com/users",
 				type : 'GET',
 				success: function(data) {
 					for(var i in data){ 
@@ -26,7 +26,7 @@ function isExistsEmail(parEmail){
        $.ajax({
        async: false,
         dataType : 'json',
-        url: "http://library-env.eba-i6btkwrd.eu-west-2.elasticbeanstalk.com/users",
+        url: "https://personal-library-application.herokuapp.com/users",
         type : 'GET',
         success: function(data) {
         for(var k in data){ 
@@ -59,7 +59,7 @@ $(document).delegate("#new",'click',function(event){
 	$.ajax({
 		type: "POST",
 		contentType: "application/json; charset=utf-8",
-		url: "http://library-env.eba-i6btkwrd.eu-west-2.elasticbeanstalk.com/new",
+		url: "https://personal-library-application.herokuapp.com/new",
 		data: JSON.stringify({'firstName': firstName,
 				'lastName':lastName,
 				'email':email,

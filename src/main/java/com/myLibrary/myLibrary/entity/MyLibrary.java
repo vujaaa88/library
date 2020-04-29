@@ -30,6 +30,7 @@ public class MyLibrary {
 	private MyUser user;
 	
 	@OneToMany(mappedBy = "library")
+//	@JoinColumn(name="library")
 	@JsonManagedReference
 	private List<Book> books = new ArrayList<>();
 	
