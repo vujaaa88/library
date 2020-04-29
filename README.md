@@ -11,4 +11,4 @@ Frameworks - Spring,Rest API,Jackson,Spring Security,Thymeleaf
 
 <h2>URL</h2>
 
-http://library-env.eba-i6btkwrd.eu-west-2.elasticbeanstalk.com/
+https://personal-library-application.herokuapp.com
