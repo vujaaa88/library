@@ -23,6 +23,7 @@ public class LibraryService {
 	public void save(MyLibrary library) {
 		libraryRepository.save(library);
 	}
+	
 	public MyLibrary findByUser(MyLibrary myLibrary) {
 		return libraryRepository.findByUser(myLibrary);
 	}	
