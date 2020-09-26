@@ -9,6 +9,6 @@ import com.myLibrary.myLibrary.entity.Book;
 import com.myLibrary.myLibrary.entity.MyLibrary;
 
 public interface LibraryRepository extends JpaRepository<MyLibrary, Long> {
-
+	
 	MyLibrary findByUser(MyLibrary myLibrary);
 }
