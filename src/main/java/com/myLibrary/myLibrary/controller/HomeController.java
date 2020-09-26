@@ -44,7 +44,7 @@ public class HomeController {
 		if(userService.findUserByUserName(user.getUserName()) == null) {
 			userService.saveUser(user);
 		}
-			return new ResponseEntity<Void>(HttpStatus.OK);
+		return new ResponseEntity<Void>(HttpStatus.OK);
 	}
 	@GetMapping("/users")
 	public List<MyUser> getUsers(){
