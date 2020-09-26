@@ -33,11 +33,11 @@ public class UserService {
         return userRepository.save(user);
     }
 
-	public List<MyUser> findAll() {
+    public List<MyUser> findAll() {
 		return userRepository.findAll();
 	}
-
-	public MyUser getOne(long id) {
+    
+    public MyUser getOne(long id) {
 		return userRepository.getOne(id);
 	}
 }
