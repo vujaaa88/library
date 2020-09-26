@@ -56,7 +56,6 @@ public class Book {
 		this.publishedOn = publishedOn;
 	}
 	
-
 	public long getId() {
 		return id;
 	}
