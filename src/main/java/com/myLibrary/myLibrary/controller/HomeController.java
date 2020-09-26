@@ -1,5 +1,6 @@
 package com.myLibrary.myLibrary.controller;
 
+import java.net.URI;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,6 +13,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import com.myLibrary.myLibrary.entity.Book;
 //import com.myLibrary.myLibrary.entity.Book;
@@ -42,11 +44,11 @@ public class HomeController {
 		if(userService.findUserByUserName(user.getUserName()) == null) {
 			userService.saveUser(user);
 		}
-		return new ResponseEntity<Void>(HttpStatus.OK);
+			return new ResponseEntity<Void>(HttpStatus.OK);
 	}
 	@GetMapping("/users")
-	public ResponseEntity<List<MyUser>> getUsers(){
-		return new ResponseEntity<List<MyUser>>(userService.findAll(), HttpStatus.OK);
+	public List<MyUser> getUsers(){
+		return userService.findAll();
 	}
 	@GetMapping("/user")
 	public ResponseEntity<MyUser> getUser(Authentication auth) {

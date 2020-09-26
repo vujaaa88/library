@@ -8,7 +8,6 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 
@@ -30,7 +29,6 @@ public class MyLibrary {
 	private MyUser user;
 	
 	@OneToMany(mappedBy = "library")
-//	@JoinColumn(name="library")
 	@JsonManagedReference
 	private List<Book> books = new ArrayList<>();
 	
@@ -41,6 +39,11 @@ public class MyLibrary {
 	public MyLibrary(String libraryName) {
 		this.libraryName = libraryName;
 	}
+	public MyLibrary(String libraryName,MyUser user) {
+		this.libraryName = libraryName;
+		this.user = user;
+	}
+	
 	public long getId() {
 		return id;
 	}
@@ -67,5 +70,11 @@ public class MyLibrary {
 	}
 	public void setBooks(List<Book> books) {
 		this.books = books;
+	}
+	public void addAll(List<Book> list) {
+		books.addAll(list);
+	}
+	public int size() {
+		return books.size();
 	}
 }

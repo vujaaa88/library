@@ -1,7 +1,9 @@
 package com.myLibrary.myLibrary.service;
 
 import java.util.List;
+import java.util.Optional;
 
+import org.hamcrest.Matcher;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -33,5 +35,9 @@ public class UserService {
 
 	public List<MyUser> findAll() {
 		return userRepository.findAll();
+	}
+
+	public MyUser getOne(long id) {
+		return userRepository.getOne(id);
 	}
 }

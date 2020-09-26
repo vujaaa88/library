@@ -49,6 +49,13 @@ public class Book {
 		this.description = description;
 		this.publishedOn = publishedOn;
 	}
+	public Book(long id,String title, String description,String publishedOn) {
+		this.id = id;
+		this.title = title;
+		this.description = description;
+		this.publishedOn = publishedOn;
+	}
+	
 
 	public long getId() {
 		return id;
