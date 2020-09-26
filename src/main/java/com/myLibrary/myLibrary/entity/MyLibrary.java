@@ -36,9 +36,11 @@ public class MyLibrary {
 	public MyLibrary() {
 		
 	}
+	
 	public MyLibrary(String libraryName) {
 		this.libraryName = libraryName;
 	}
+	
 	public MyLibrary(String libraryName,MyUser user) {
 		this.libraryName = libraryName;
 		this.user = user;
