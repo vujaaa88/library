@@ -30,7 +30,7 @@ public class MyUser {
 	private String lastName;
 	
 	@Column(unique = true,name="user_name")
-    @NotEmpty(message = "*Please provide a user name")
+  	@NotEmpty(message = "*Please provide a user name")
 	private String userName;
 	
 	@Column(name="email")
